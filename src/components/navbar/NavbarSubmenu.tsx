@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
@@ -116,3 +115,4 @@ const NavbarSubmenu = ({
 };
 
 export default NavbarSubmenu;
+

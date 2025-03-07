@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Search } from "lucide-react";
 
@@ -41,3 +40,4 @@ const NavbarSearch = ({ mobile = false }: NavbarSearchProps) => {
 };
 
 export default NavbarSearch;
+

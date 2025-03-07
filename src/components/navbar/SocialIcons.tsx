@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Facebook, Twitter, Instagram, Youtube } from "lucide-react";
 
@@ -27,3 +26,4 @@ const SocialIcons = ({ size = 18, className = "" }: SocialIconsProps) => {
 };
 
 export default SocialIcons;
+

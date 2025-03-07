@@ -1,4 +1,3 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import { MenuItem } from "./NavbarSubmenu";
@@ -59,3 +58,4 @@ const MobileNavbar = ({
 };
 
 export default MobileNavbar;
+

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -26,3 +25,4 @@ const NavLogo = ({ mini = false }: NavLogoProps) => {
 };
 
 export default NavLogo;
+
