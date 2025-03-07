@@ -100,12 +100,12 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-serif font-bold text-church-DEFAULT relative pb-4 mb-8 inline-block;
+    @apply text-3xl md:text-4xl font-serif font-bold text-[#1a365d] relative pb-4 mb-8 inline-block;
   }
   
   .section-title::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-church-gold;
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-[#d4af37];
   }
   
   .card-hover {
@@ -113,16 +113,16 @@
   }
   
   .nav-link {
-    @apply relative px-3 py-2 text-gray-700 hover:text-church-DEFAULT transition-colors duration-300;
+    @apply relative px-3 py-2 text-gray-700 hover:text-[#1a365d] transition-colors duration-300;
   }
   
   .nav-link-active {
-    @apply text-church-DEFAULT font-medium;
+    @apply text-[#1a365d] font-medium;
   }
   
   .nav-link-active::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-full h-0.5 bg-church-gold;
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-[#d4af37];
   }
   
   .page-container {

@@ -54,10 +54,10 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				church: {
-					DEFAULT: '#1a365d', // bleu profond
-					gold: '#d4af37',    // or
-					light: '#ebf8ff',   // bleu clair
-					dark: '#0f172a',    // bleu très foncé
+					'DEFAULT': '#1a365d', // deep blue
+					'gold': '#d4af37',    // gold
+					'light': '#ebf8ff',   // light blue
+					'dark': '#0f172a',    // very dark blue
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
