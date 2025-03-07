@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Banner */
 .banner {
   position: relative;
-  height: 80vh;
+  height: 300px;
   min-height: 500px;
   background-size: cover;
   background-position: center;
@@ -122,8 +122,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Section title */
 .section-title {
   position: relative;
-  display: inline-block;
-  margin-bottom: 2rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 1rem;
   color: var(--church-blue);
 }
 
