@@ -122,3 +122,61 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Fonction pour vérifier si un élément est visible dans la fenêtre
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Fonction pour ajouter l'animation
+function handleScroll() {
+  const newsCards = document.querySelectorAll('.news-card');
+  
+  newsCards.forEach(card => {
+    if (isElementInViewport(card)) {
+      card.classList.add('visible');
+    }
+  });
+}
+
+// Ajouter un écouteur d'événements sur le défilement de la page
+window.addEventListener('scroll', handleScroll);
+
+// Exécuter la fonction au chargement de la page pour les éléments déjà visibles
+document.addEventListener('DOMContentLoaded', handleScroll);
+
+
+// Fonction pour vérifier si un élément est visible dans la fenêtre
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+// Fonction pour ajouter l'animation
+function handleScroll() {
+  // Cibler toutes les cartes .news-card dans toutes les sections
+  const newsCards = document.querySelectorAll('.news-card');
+  
+  newsCards.forEach(card => {
+    if (isElementInViewport(card)) {
+      card.classList.add('visible');
+    }
+  });
+}
+
+// Ajouter un écouteur d'événements sur le défilement de la page
+window.addEventListener('scroll', handleScroll);
+
+// Exécuter la fonction au chargement de la page pour les éléments déjà visibles
+document.addEventListener('DOMContentLoaded', handleScroll);
