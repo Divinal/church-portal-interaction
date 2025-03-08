@@ -151,6 +151,12 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+.card-img-top {
+  width: 50%; /* Ajuste ce pourcentage selon la taille que tu veux */
+  height: auto; /* Conserve les proportions de l'image */
+}
+
+
 .news-card img {
   height: 200px;
   object-fit: cover;
