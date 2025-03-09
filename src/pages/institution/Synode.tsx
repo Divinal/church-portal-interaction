@@ -1,6 +1,7 @@
 
 import Banner from "@/components/Banner";
 import PageLayout from "@/components/PageLayout";
+import CommentForm from "@/components/CommentForm";
 
 const Synode = () => {
   return (
@@ -82,7 +83,7 @@ const Synode = () => {
             </div>
           </section>
           
-          <section className="animate-fade-in delay-300">
+          <section className="animate-fade-in delay-300 mb-12">
             <h2 className="section-title">Histoire synodale</h2>
             <p className="text-lg text-gray-700 mb-6">
               Depuis sa fondation, l'Église Évangélique du Congo a tenu de nombreux synodes qui ont marqué son histoire et son évolution. Ces assemblées ont permis à l'Église de s'adapter aux changements sociaux tout en restant fidèle à ses fondements théologiques.
@@ -92,6 +93,13 @@ const Synode = () => {
                 "Le Synode est la manifestation visible de notre unité dans la diversité, où chaque voix compte et où ensemble nous discernons la direction que le Seigneur nous indique pour notre Église."
               </p>
               <p className="mt-2 font-medium">— Extrait des actes du Synode de 2019</p>
+            </div>
+          </section>
+          
+          <section className="mb-12">
+            <h2 className="section-title">Partagez votre opinion</h2>
+            <div className="mt-8">
+              <CommentForm />
             </div>
           </section>
         </div>
