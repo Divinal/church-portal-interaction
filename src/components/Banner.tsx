@@ -1,39 +1,29 @@
 
-import { cn } from "@/lib/utils";
+import React from 'react';
 
 interface BannerProps {
-  title: string;
-  subtitle?: string;
-  imageSrc: string;
-  height?: string;
-  className?: string;
+  title?: string;
+  description?: string;
+  bannerImage?: string;
 }
 
-const Banner = ({
-  title,
-  subtitle,
-  imageSrc,
-  height = "h-[60vh]",
-  className,
-}: BannerProps) => {
+const Banner: React.FC<BannerProps> = ({ 
+  title, 
+  description, 
+  bannerImage = '/images/banners/home-banner.jpg' 
+}) => {
   return (
-    <div
-      className={cn(
-        "banner", 
-        height,
-        className
-      )}
-      style={{ backgroundImage: `url(${imageSrc})` }}
-    >
-      <div className="banner-content">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 animate-fade-in text-center">
-          {title}
-        </h1>
-        {subtitle && (
-          <p className="text-lg md:text-xl max-w-3xl text-center animate-fade-in delay-100">
-            {subtitle}
-          </p>
-        )}
+    <div className="relative">
+      <div 
+        className="w-full h-64 bg-cover bg-center"
+        style={{ backgroundImage: `url(${bannerImage})` }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="text-center text-white px-4">
+            {title && <h1 className="text-4xl font-bold mb-2">{title}</h1>}
+            {description && <p className="text-xl">{description}</p>}
+          </div>
+        </div>
       </div>
     </div>
   );
