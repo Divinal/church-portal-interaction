@@ -71,8 +71,8 @@ const Index = () => {
     <PageLayout>
       <Banner
         title="Église Évangélique du Congo"
-        subtitle="Annoncer l'Évangile, Servir le prochain, Vivre dans la foi"
-        imageSrc="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05"
+        description="Annoncer l'Évangile, Servir le prochain, Vivre dans la foi"
+        bannerImage="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05"
       />
 
       {/* Section Actualités */}

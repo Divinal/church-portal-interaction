@@ -1,17 +1,35 @@
 
-import { ReactNode } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import React, { ReactNode } from 'react';
+import Navbar from './Navbar';
+import Footer from './Footer';
+import Banner from './Banner';
 
 interface PageLayoutProps {
   children: ReactNode;
+  title?: string;
+  description?: string;
+  bannerImage?: string;
 }
 
-const PageLayout = ({ children }: PageLayoutProps) => {
+const PageLayout: React.FC<PageLayoutProps> = ({ 
+  children, 
+  title, 
+  description, 
+  bannerImage = '/images/banners/home-banner.jpg' 
+}) => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-grow pt-16">{children}</main>
+      {bannerImage && (
+        <Banner 
+          title={title} 
+          description={description}
+          bannerImage={bannerImage}
+        />
+      )}
+      <main className="flex-grow">
+        {children}
+      </main>
       <Footer />
     </div>
   );

@@ -65,8 +65,8 @@ const Jeunesse = () => {
     <PageLayout>
       <Banner
         title="Département de la Jeunesse"
-        subtitle="Former et accompagner la nouvelle génération dans la foi"
-        imageSrc="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=1200&h=800&fit=crop"
+        description="Former et accompagner la nouvelle génération dans la foi"
+        bannerImage="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=1200&h=800&fit=crop"
       />
       
       <div className="page-container">

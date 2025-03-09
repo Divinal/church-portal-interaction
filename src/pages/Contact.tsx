@@ -9,8 +9,8 @@ const Contact = () => {
     <PageLayout>
       <Banner
         title="Contact"
-        subtitle="Nous sommes à votre écoute"
-        imageSrc="https://images.unsplash.com/photo-1473177104440-ffee2f376098"
+        description="Nous sommes à votre écoute"
+        bannerImage="https://images.unsplash.com/photo-1473177104440-ffee2f376098"
       />
       
       <div className="page-container">
