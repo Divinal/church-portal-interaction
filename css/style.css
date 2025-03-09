@@ -214,7 +214,7 @@ ul {
 
 /* Animations */
 .fade-in {
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -230,15 +230,15 @@ ul {
 
 /* Animation slide-in */
 .slide-in {
-  animation: slideIn 0.5s ease-out;
+  animation: slideIn 0.3s ease-out;
 }
 
 @keyframes slideIn {
-  0% {
+  from {
       transform: translateX(-100%);
       opacity: 0;
   }
-  100% {
+  to{
       transform: translateX(0);
       opacity: 1;
   }
@@ -256,11 +256,11 @@ ul {
 /* Annimation section NEWS */
 /* Animation pour l'apparition de l'élément de bas vers le haut */
 @keyframes fadeInUp {
-  0% {
+  from {
     opacity: 0;
     transform: translateY(50px);  /* Départ du bas */
   }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(0);  /* Position finale */
   }
@@ -270,59 +270,59 @@ ul {
 .news-card {
   opacity: 0;
   transform: translateY(50px);  /* Initialement positionné en bas */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition: opacity 0.3s ease-out, transform 0.6s ease-out;
 }
 
 /* Animation visible lorsque l'élément est dans le viewport */
 .news-card.visible {
-  animation: fadeInUp 0.6s forwards;
+  animation: fadeInUp 0.3s forwards;
 }
 
 /* Annimation section Boby */
 /* Animation de bas vers le haut */
-@keyframes fadeInUp {
-  0% {
+/* @keyframes fadeInUp {
+  from {
     opacity: 0;
-    transform: translateY(50px); /* Départ du bas */
+    transform: translateY(50px); 
   }
-  100% {
+  to {
     opacity: 1;
-    transform: translateY(0); /* Position finale */
+    transform: translateY(0); 
   }
-}
+} */
 
 /* Appliquer l'animation aux cartes dans #about */
-#about .news-card {
+/* #about .news-card {
   opacity: 0;
-  transform: translateY(50px); /* Initialement positionné en bas */
+  transform: translateY(50px); 
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-}
+} */
 
 /* Animation visible lorsque l'élément est dans le viewport */
-#about .news-card.visible {
-  animation: fadeInUp 0.6s forwards;
-}
+/* #about .news-card.visible {
+  animation: fadeInUp 0.3s forwards;
+} */
 
 /* Appliquer l'animation aux cartes dans .py-5 */
-.py-5 .news-card {
+/* .py-5 .news-card {
   opacity: 0;
-  transform: translateY(50px); /* Initialement positionné en bas */
+  transform: translateY(50px); 
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .py-5 .news-card.visible {
-  animation: fadeInUp 0.6s forwards;
-}
+  animation: fadeInUp 0.3s forwards;
+} */
 
 /* Appliquer l'animation aux cartes dans .bg-light */
-.bg-light .news-card {
+/* .bg-light .news-card {
   opacity: 0;
-  transform: translateY(50px); /* Initialement positionné en bas */
+  transform: translateY(50px); 
   transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 .bg-light .news-card.visible {
-  animation: fadeInUp 0.6s forwards;
-}
+  animation: fadeInUp 0.3s forwards;
+} */
 
 
