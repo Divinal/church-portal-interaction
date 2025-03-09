@@ -179,7 +179,17 @@ ul {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
+.service-card, .news-card1 {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
 .service-card:hover, .news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.service-card:hover, .news-card1:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
@@ -195,9 +205,17 @@ ul {
   object-fit: cover;
 }
 
+.news-card1 img {
+  height: 400px;
+  object-fit: cover;
+}
 .news-card .card-title {
   color: var(--church-blue);
 }
+.news-card1 .card-title {
+  color: var(--church-blue);
+}
+
 
 .icon-box {
   color: var(--church-blue);
