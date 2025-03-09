@@ -246,3 +246,20 @@ function searchSite(event) {
     searchResults.style.display = "none";
   }
 }
+
+// Afficher dans le mobile
+
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener('click', function(event) {
+      if (window.innerWidth < 992) {
+        event.preventDefault();
+        let submenu = this.querySelector('.dropdown-menu');
+        if (submenu) {
+          submenu.classList.toggle('show');
+        }
+      }
+    });
+  });
+});
