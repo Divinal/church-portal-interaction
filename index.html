@@ -23,8 +23,32 @@
   </head>
 
   <body>
+
+        <!-- Barre de navigation supérieure avec réseaux sociaux et recherche -->
+        <div class="top-nav bg-light py-2 fixed-top">
+          <div class="container d-flex justify-content-between align-items-center">
+            <div class="social-icons">
+              <a href="#" class="text-dark me-3"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-dark me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-dark me-3"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-dark"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div><i class="fas fa-envelope text-gold me-1"></i>
+              <span>contact@egliseevangeliquecongo.org</span></div>
+            <div class="d-flex align-items-center">
+              <i class="fas fa-map-marker-alt text-gold me-1"></i>
+              <span class="me-3">Rue Alfred Fourneau, Centre Ville Brazzaville, Congo</span>
+              <i class="fas fa-phone text-gold me-1"></i>
+              <span>+242 12 345 6789</span>
+            </div>
+            <form class="d-flex" onsubmit="return searchSite(event)">
+              <input class="form-control me-2" type="search" id="searchQuery" placeholder="Rechercher..." aria-label="Rechercher">
+              <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+        </div>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top bg-white navbar-light">
+    <nav class="navbar navbar-expand-lg fixed-top bg-white navbar-light" style="top: 25px; z-index: 1040; margin-top: 25px;">
       <div class="container">
         <a class="navbar-brand fw-bold" href="index.html">Église Évangélique du Congo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,10 +99,6 @@
               <a class="nav-link" href="blog.html">Blog</a>
             </li>
           </ul>
-          <form class="d-flex ms-3" onsubmit="return searchSite(event)">
-            <input class="form-control me-2" type="search" id="searchQuery" placeholder="Rechercher..." aria-label="Rechercher">
-            <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
-          </form>
         </div>
       </div>
     </nav>
@@ -87,7 +107,7 @@
       <h2>Résultats de recherche</h2>
       <ul id="resultsList" class="list-group"></ul>
     </div>
-    
+
     <!-- Main Content -->
     <main> 
       <!-- Hero Banner -->
