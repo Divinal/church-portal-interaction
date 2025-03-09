@@ -75,10 +75,19 @@
               <a class="nav-link" href="blog.html">Blog</a>
             </li>
           </ul>
+          <form class="d-flex ms-3" onsubmit="return searchSite(event)">
+            <input class="form-control me-2" type="search" id="searchQuery" placeholder="Rechercher..." aria-label="Rechercher">
+            <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
+          </form>
         </div>
       </div>
     </nav>
 
+    <div id="searchResults" class="container mt-4" style="display: none;">
+      <h2>Résultats de recherche</h2>
+      <ul id="resultsList" class="list-group"></ul>
+    </div>
+    
     <!-- Main Content -->
     <main> 
       <!-- Hero Banner -->

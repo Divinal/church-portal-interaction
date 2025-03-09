@@ -180,3 +180,69 @@ window.addEventListener('scroll', handleScroll);
 
 // Exécuter la fonction au chargement de la page pour les éléments déjà visibles
 document.addEventListener('DOMContentLoaded', handleScroll);
+
+// Recherche
+
+function searchSite(event) {
+  event.preventDefault();
+  const query = document.getElementById("searchQuery").value.toLowerCase().trim();
+  const resultsList = document.getElementById("resultsList");
+  const searchResults = document.getElementById("searchResults");
+  const currentPage = window.location.pathname.split("/").pop();
+  const pages = [
+    "index.html", "institution/synode.html", "institution/conseil-synodal.html",
+    "departements/jeunesse.html", "departements/musique.html", "contact.html", "blog.html"
+  ];
+  
+  resultsList.innerHTML = "";
+  let found = false;
+  
+  // Recherche dans les autres pages
+  pages.forEach(page => {
+    if (page !== currentPage) {
+      fetch(page)
+        .then(response => response.text())
+        .then(html => {
+          if (html.toLowerCase().includes(query)) {
+            let listItem = document.createElement("li");
+            listItem.classList.add("list-group-item");
+            
+            let link = document.createElement("a");
+            link.href = page;
+            link.innerHTML = `<strong>${query}</strong> trouvé sur la page : ${page}`;
+            
+            listItem.appendChild(link);
+            resultsList.appendChild(listItem);
+            searchResults.style.display = "block";
+            found = true;
+          }
+        });
+    }
+  });
+  
+  // Recherche dans la page actuelle
+  const contentElements = document.querySelectorAll("main, section, p, h1, h2, h3, h4, h5, h6, li");
+  contentElements.forEach(element => {
+    if (element.innerText.toLowerCase().includes(query)) {
+      let listItem = document.createElement("li");
+      listItem.classList.add("list-group-item");
+      
+      let link = document.createElement("a");
+      link.href = "#";
+      link.innerHTML = `<strong>${query}</strong> trouvé ici : ${element.innerText.substring(0, 100)}...`;
+      link.onclick = function() {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      };
+      
+      listItem.appendChild(link);
+      resultsList.appendChild(listItem);
+      searchResults.style.display = "block";
+      found = true;
+    }
+  });
+  
+  if (!found) {
+    alert("Aucun résultat trouvé");
+    searchResults.style.display = "none";
+  }
+}
