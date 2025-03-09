@@ -47,8 +47,8 @@ const ConseilSynodal = () => {
     <PageLayout>
       <Banner
         title="Conseil Synodal"
-        subtitle="L'organe exécutif entre les sessions du Synode"
-        imageSrc="https://images.unsplash.com/photo-1466442929976-97f336a657be"
+        description="L'organe exécutif entre les sessions du Synode"
+        bannerImage="https://images.unsplash.com/photo-1466442929976-97f336a657be"
       />
       
       <div className="page-container">

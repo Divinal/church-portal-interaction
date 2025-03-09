@@ -7,8 +7,8 @@ const Synode = () => {
     <PageLayout>
       <Banner
         title="Le Synode"
-        subtitle="L'assemblée délibérante de l'Église Évangélique du Congo"
-        imageSrc="https://images.unsplash.com/photo-1466442929976-97f336a657be"
+        description="L'assemblée délibérante de l'Église Évangélique du Congo"
+        bannerImage="https://images.unsplash.com/photo-1466442929976-97f336a657be"
       />
       
       <div className="page-container">
