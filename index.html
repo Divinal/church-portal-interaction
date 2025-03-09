@@ -15,7 +15,8 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -79,34 +80,66 @@
     </nav>
 
     <!-- Main Content -->
-    <main>
+    <main> 
       <!-- Hero Banner -->
+
       <section class="banner" style="background-image: url('images/banners/home-banner.jpg');">
         <div class="banner-content">
-          <h1 class="display-3 text-center mb-4 fade-in">Église Évangélique du Congo</h1>
-          <p class="lead text-center mb-5 fade-in"> Repose sur les principes fondamentaux du protestantisme :
-
-            La suprématie des Écritures (la Bible comme seule autorité de foi et de pratique)
-            Le salut par la foi en Jésus-Christ
-            La pratique des sacrements du baptême et de la Sainte-Cène
-            L’importance de la prédication et de la formation théologique</p>
-          <div class="text-center">
-            <a href="contact.html" class="btn btn-primary btn-lg">Nous contacter </a>
-          </div>
+            <h1 class="display-3 text-center mb-4 fade-in">Église Évangélique du Congo</h1>
+            <p class="lead text-center mb-5 slide-in">Repose sur les principes fondamentaux du protestantisme :
+                La suprématie des Écritures (la Bible comme seule autorité de foi et de pratique)
+                Le salut par la foi en Jésus-Christ . . .</p>
+            <div class="text-center">
+                <a href="contact.html" class="btn btn-primary btn-lg">Nous contacter</a>
+            </div>
         </div>
-      </section>
+    </section>    
 
        <!-- Autres section -->
         
        <section class="py-5"> 
         <div class="container py-5">
           <div class="row">
+            <!-- Colonne de gauche -->
             <div class="col-lg-8">
               <h2 class="mb-4">Qu'est-ce que le Synode ?</h2>
               <p class="lead mb-4">Le Synode est l'assemblée générale de l'Église Évangélique du Congo. C'est l'organe suprême de décision qui définit les orientations et les politiques de l'église.</p>
-              
-              <p class="mb-4">Le Synode se réunit tous les trois ans en session ordinaire. Toutefois, des sessions extraordinaires peuvent être convoquées selon les besoins. Il regroupe les délégués de toutes les paroisses et consistoires, ainsi que les membres du Conseil Synodal.</p>
-              
+      
+              <!-- Carrousel d'images -->
+              <div id="synodeCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/images/bureauSyn.jpg" class="d-block w-100" alt="Image 1">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Le Bureau synodal</h5>
+                      <p>Les membres du nouveau bureau synodal élu lors du dernier congrès Synodal pour un mandat de 5 ans.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/images/commiGuide.jpg" class="d-block w-100" alt="Image 2">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Commission de Guide Biblique</h5>
+                      <p>Dernier Rassemblement pour la préparation du dernier Guide Bible National.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/synode3.jpg" class="d-block w-100" alt="Image 3">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Synode de 2023</h5>
+                      <p>Description de l'événement de 2023.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#synodeCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#synodeCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
+      
               <h3 class="mt-5 mb-3">Rôle et attributions</h3>
               <ul class="mb-5">
                 <li>Définir les orientations générales de l'Église</li>
@@ -117,7 +150,7 @@
                 <li>Consacrer les pasteurs et reconnaître les ministères</li>
                 <li>Créer, modifier ou supprimer les départements et commissions</li>
               </ul>
-              
+      
               <h3 class="mb-3">Composition du Synode</h3>
               <p>Le Synode est composé de :</p>
               <ul>
@@ -127,18 +160,19 @@
                 <li>Représentants des institutions ecclésiastiques</li>
               </ul>
             </div>
-            
+      
+            <!-- Colonne de droite (restant inchangée) -->
             <div class="col-lg-4">
               <div class="card mb-4">
                 <div class="card-header bg-primary text-white">
                   <h4 class="card-title">Prochain Synode</h4>
-              </div> 
+                </div> 
                 <div class="card-body">             
                   <p class="card-text">La prochaine session ordinaire du Synode aura lieu du 15 au 20 août 2023 à Brazzaville.</p>
                   <a href="#" class="btn btn-primary">En savoir plus</a>
                 </div>
               </div>
-              
+      
               <div class="card mb-4">
                 <div class="card-header bg-primary text-white">
                   <h4 class="card-title">Documents Importants</h4>
@@ -162,16 +196,16 @@
                   </li>                 
                 </ul>
               </div>
-              
+      
               <div class="card">
                 <img src="images/images/calendar2.png" class="card-img-top" alt="Prochaine activités" style="width: 100px; height: auto;">
                 <div class="card-header bg-primary text-white">
                   <h4 class="card-title">Les activivés phares</h4>
-              </div>
+                </div>
                 <div class="card-body">
                   <i class="far fa-calendar-alt me-1"></i> 15 Juin 2023
-                  <h5 class="card-title">activités Mensuelles</h5>
-                  <p class="card-text">Il sera organisé la séances de prière synodale dans l'enceinte de la paroisse évangélisue de Makélékélé.</p>
+                  <h5 class="card-title">Activités Mensuelles</h5>
+                  <p class="card-text">Il sera organisé la séance de prière synodale dans l'enceinte de la paroisse évangélisue de Makélékélé.</p>
                   <a href="#" class="btn btn-outline-primary">En savoir plus ...</a>
                 </div>
               </div>
@@ -179,12 +213,21 @@
           </div>
         </div>
       </section>
-
+      
       <!-- Services Section -->
       <section class="py-5 bg-light">
         <div class="container py-5">
           <div class="news-card">
-          <h2 class="section-title text-center mb-5">Nos Services</h2>
+            <p>
+              <h2 class="section-title text-center mb-5">Doctrine et pratiques</h2>
+              <h5 style="text-align: center;">L’Église Évangélique du Congo repose sur les principes fondamentaux du protestantisme :</h5>
+              <ol>
+                  <li>La suprématie des Écritures (la Bible comme seule autorité de foi et de pratique)</li>
+                  <li>Le salut par la foi en Jésus-Christ</li>
+                  <li>La pratique des sacrements du baptême et de la Sainte-Cène</li>
+                  <li>L’importance de la prédication et de la formation théologique</li>
+              </ol>
+          </p>
           <div class="row g-4">
             <div class="col-md-4">
               <div class="card h-100 service-card">
@@ -282,21 +325,26 @@
 
       <section id="about" class="py-5">
         <div class="container">
-          <div class="news-card">
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <img src="images/banners/apropos.png" class="img-fluid rounded shadow" alt="À propos">
+            <div class="news-card">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="images/images/ngouedi.jpg" class="img-fluid rounded shadow" alt="À propos">
+                    </div>
+                    <div class="col-md-6">
+                        <h2 class="section-title">L’Église Évangélique du Congo (EEC)</h2>
+                        <p>L’Église Évangélique du Congo (EEC) est l’une des plus anciennes et des plus influentes dénominations protestantes en République du Congo. Fondée en 1909 par la Société des Missions Evangéliques de Paris (SMEP), elle s'est progressivement développée sur tout le territoire congolais.
+                            <br>
+                            <h4>Histoire et implantation</h4>
+                            L’EEC est le fruit du travail missionnaire protestant venu de France, qui avait pour objectif d’évangéliser et d’accompagner le développement spirituel et social des populations congolaises. Elle s'est implantée principalement dans les régions du Pool, des Plateaux, de la Cuvette, et du Niari, avant de s'étendre sur l’ensemble du pays. Aujourd’hui, elle est présente dans plusieurs villes, notamment Brazzaville, Pointe-Noire, Dolisie, et Owando, et elle compte de nombreux fidèles.
+                            <br><br>
+                            <h4>Organisation et structure</h4>
+                            L’EEC est une église réformée presbytérienne, c'est-à-dire qu'elle fonctionne selon un système de gouvernance représentatif avec des synodes régionaux et un Synode National qui est l’organe de décision suprême. L’église est dirigée par un Président National, assisté d’un bureau exécutif et des responsables régionaux.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-              <h2 class="section-title">À propos</h2>
-              <p>Depuis 2010, nous œuvrons pour...</p>
-            </div>
-          </div>
         </div>
-      </div>
-      </section>
-
-    
+    </section>
 
       <!-- Call to Action -->
       <section class="py-5 bg-primary text-white">
@@ -316,7 +364,8 @@
         <div class="row g-4">
           <div class="col-lg-4">
             <h3 class="h5 mb-4 text-gold">Église Évangélique du Congo</h3>
-            <p class="mb-4">Église du Christ au Congo, annonçant l'Évangile et servant la communauté depuis plusieurs décennies.</p>
+            <p class="mb-4">Fondée en <strong>1909</strong> par la <em>Société des Missions Évangéliques de Paris (SMEP), l’Église Évangélique du Congo (EEC)</em> est l’une des principales dénominations protestantes du pays. Elle fonctionne selon un système <strong>presbytérien réformé,</strong> dirigé par un <strong>Synode National</strong> et un <strong>Président National.</strong>
+              L’EEC repose sur les principes fondamentaux du protestantisme : <strong>suprématie de la Bible, salut par la foi en Jésus-Christ, et importance de la prédication.</strong> En plus de sa mission spirituelle, elle est active dans <strong>l’éducation, la santé et le développement social.</strong> Elle collabore avec plusieurs organisations chrétiennes internationales et continue d’avoir un impact significatif au Congo.</p>
             <div class="d-flex gap-3 mt-4">
               <a href="#" class="text-white hover-gold"><i class="fab fa-facebook-f"></i></a>
               <a href="#" class="text-white hover-gold"><i class="fab fa-twitter"></i></a>
@@ -341,7 +390,7 @@
             <ul class="list-unstyled">
               <li class="mb-3 d-flex">
                 <i class="fas fa-map-marker-alt text-gold me-3 mt-1"></i>
-                <span>123 Rue de l'Église, Brazzaville, Congo</span>
+                <span>Rue Alfred Fourneau, Centre Ville Brazzaville, Congo</span>
               </li>
               <li class="mb-3 d-flex">
                 <i class="fas fa-phone text-gold me-3 mt-1"></i>

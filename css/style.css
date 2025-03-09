@@ -22,6 +22,27 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+h4 {
+  text-align: center; /* Centre le texte */
+  /* text-decoration: underline; Souligne le texte */
+  font-weight: bold; /* Vous pouvez rendre le texte en gras si vous le souhaitez */
+  margin-top: 20px; /* Optionnel : ajout d'un espace au-dessus du titre */
+  margin-bottom: 20px; /* Optionnel : ajout d'un espace en dessous du titre */
+}
+
+ol {
+  text-align: justify; /* Centre les éléments dans la liste */
+  font-size: 1.25rem; /* Agrandit la taille de la police */
+  font-weight: bold; /* Met en gras */
+  font-style: italic; /* Met en italique */
+  margin-left: 0; /* Supprime l'indentation par défaut */
+}
+
+ul {
+  padding-left: 0; /* Supprime l'indentation de la liste */
+  list-style-type: none; /* Supprime les puces de la liste */
+}
+
 .text-gold {
   color: var(--church-gold) !important;
 }
@@ -119,6 +140,18 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
+.banner h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.banner p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
 /* Section title */
 .section-title {
   position: relative;
@@ -158,7 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .news-card img {
-  height: 200px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -194,6 +227,23 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateY(0);
   }
 }
+
+/* Animation slide-in */
+.slide-in {
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
