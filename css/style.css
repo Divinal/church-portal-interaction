@@ -296,51 +296,19 @@ ul {
   animation: fadeInUp 0.3s forwards;
 }
 
-/* Annimation section Boby */
-/* Animation de bas vers le haut */
-/* @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px); 
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0); 
-  }
-} */
-
-/* Appliquer l'animation aux cartes dans #about */
-/* #about .news-card {
-  opacity: 0;
-  transform: translateY(50px); 
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
-} */
-
-/* Animation visible lorsque l'élément est dans le viewport */
-/* #about .news-card.visible {
-  animation: fadeInUp 0.3s forwards;
-} */
-
-/* Appliquer l'animation aux cartes dans .py-5 */
-/* .py-5 .news-card {
-  opacity: 0;
-  transform: translateY(50px); 
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+/* Sous - menu */
+.dropdown-submenu {
+  position: relative;
 }
 
-.py-5 .news-card.visible {
-  animation: fadeInUp 0.3s forwards;
-} */
-
-/* Appliquer l'animation aux cartes dans .bg-light */
-/* .bg-light .news-card {
-  opacity: 0;
-  transform: translateY(50px); 
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+  display: none;
+  position: absolute;
 }
 
-.bg-light .news-card.visible {
-  animation: fadeInUp 0.3s forwards;
-} */
-
-
+.dropdown-submenu:hover .dropdown-menu {
+  display: block;
+}

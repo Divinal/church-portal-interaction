@@ -247,19 +247,53 @@ function searchSite(event) {
   }
 }
 
-// Afficher dans le mobile
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = document.querySelectorAll(".nav-item.dropdown");
 
-document.addEventListener('DOMContentLoaded', function() {
-  const dropdowns = document.querySelectorAll('.nav-item.dropdown');
   dropdowns.forEach(dropdown => {
-    dropdown.addEventListener('click', function(event) {
+    dropdown.addEventListener("mouseenter", function () {
+      if (window.innerWidth >= 992) {
+        this.classList.add("show");
+        this.querySelector(".dropdown-menu").classList.add("show");
+      }
+    });
+
+    dropdown.addEventListener("mouseleave", function () {
+      if (window.innerWidth >= 992) {
+        this.classList.remove("show");
+        this.querySelector(".dropdown-menu").classList.remove("show");
+      }
+    });
+
+    dropdown.querySelector(".nav-link.dropdown-toggle").addEventListener("click", function (event) {
       if (window.innerWidth < 992) {
         event.preventDefault();
-        let submenu = this.querySelector('.dropdown-menu');
-        if (submenu) {
-          submenu.classList.toggle('show');
+        let submenu = dropdown.querySelector(".dropdown-menu");
+        let isOpen = submenu.classList.contains("show");
+        
+        // Fermer tous les autres menus ouverts
+        document.querySelectorAll(".dropdown-menu.show").forEach(menu => {
+          menu.classList.remove("show");
+        });
+        
+        if (!isOpen) {
+          submenu.classList.add("show");
         }
       }
     });
+  });
+});
+
+// Sous - Menu
+
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = document.querySelectorAll(".dropdown-submenu > a");
+  
+  dropdowns.forEach(dropdown => {
+      dropdown.addEventListener("click", function (e) {
+          e.preventDefault();
+          let submenu = this.nextElementSibling;
+          submenu.classList.toggle("show");
+      });
   });
 });
