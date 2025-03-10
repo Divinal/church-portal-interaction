@@ -68,23 +68,23 @@
                   Départements
               </a>
               <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="dgep.html">DGEP</a></li>
-                  <li><a class="dropdown-item" href="cteapd.html">CTEPAD</a></li>
-                  <li><a class="dropdown-item" href="sante.html">Santé</a></li>
-                  <li><a class="dropdown-item" href="jeunesse.html">Jeunesse</a></li>
-                  <li><a class="dropdown-item" href="musique.html">Musique</a></li>
-                  <li><a class="dropdown-item" href="evangelisation.html">Évangélisation</a></li>
-                  <li><a class="dropdown-item" href="femmes-famille.html">Femmes et Famille</a></li>
-                  <li><a class="dropdown-item" href="action-paix.html">Action Évangélique pour la Paix</a></li>
+                  <li><a class="dropdown-item" href="../departements/dgep.html">DGEP</a></li>
+                  <li><a class="dropdown-item" href="../departements/cteapd.html">CTEPAD</a></li>
+                  <li><a class="dropdown-item" href="../departements/sante.html">Santé</a></li>
+                  <li><a class="dropdown-item" href="../departements/jeunesse.html">Jeunesse</a></li>
+                  <li><a class="dropdown-item" href="../departements/musique.html">Musique</a></li>
+                  <li><a class="dropdown-item" href="../departements/evangelisation.html">Évangélisation</a></li>
+                  <li><a class="dropdown-item" href="../departements/femmes-famille.html">Femmes et Famille</a></li>
+                  <li><a class="dropdown-item" href="../departements/action-paix.html">Action Évangélique pour la Paix</a></li>
                   <!-- Sous-menu Aumônerie -->
                   <li class="dropdown-submenu">
                       <a class="dropdown-item dropdown-toggle" href="#">Aumônerie-Générale</a>
                       <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="aumonerie-arme.html">Armé</a></li>
-                          <li><a class="dropdown-item" href="aumonerie-prison.html">Prison</a></li>
-                          <li><a class="dropdown-item" href="aumonerie-education.html">Université/Scoalire</a></li>
-                          <li><a class="dropdown-item" href="aumonerie-hopital.html">Centres de Santé/Hopitaux</a></li>
-                          <li><a class="dropdown-item" href="aumonerie-pmr.html">Personnes avec Handicape</a></li>
+                          <li><a class="dropdown-item" href="#">Armé</a></li>
+                          <li><a class="dropdown-item" href="#">Prison</a></li>
+                          <li><a class="dropdown-item" href="#">Université/Scoalire</a></li>
+                          <li><a class="dropdown-item" href="#">Centres de Santé/Hopitaux</a></li>
+                          <li><a class="dropdown-item" href="#">Personnes avec Handicape</a></li>
                           
                       </ul>
                   </li>
@@ -104,10 +104,10 @@
                 Partenaraires
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../partenaires/confrerie.html">CVAA</a></li>
-                <li><a class="dropdown-item" href="../partenaires/confrerie.html">Fédération des EPC</a></li>
-                <li><a class="dropdown-item" href="../partenaires/confrerie.html">Plateforme des EEAC</a></li>
-                <li><a class="dropdown-item" href="../partenaires/oecumenisme.html">Conseil Œcuménisme ECC</a></li>
+                <li><a class="dropdown-item" href="#">CVAA</a></li>
+                <li><a class="dropdown-item" href="#">Fédération des EPC</a></li>
+                <li><a class="dropdown-item" href="#">Plateforme des EEAC</a></li>
+                <li><a class="dropdown-item" href="oecumenisme.html">Conseil Œcuménisme ECC</a></li>
                 <li class="dropdown-submenu">
                   <a class="dropdown-item dropdown-toggle" href="#">Partenariat Historique</a>
                   <ul class="dropdown-menu">
