@@ -285,7 +285,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Sous - Menu
-
 document.addEventListener("DOMContentLoaded", function () {
   const dropdowns = document.querySelectorAll(".dropdown-submenu > a");
   
