@@ -151,17 +151,22 @@ ul {
   z-index: 1;
 }
 
+/* Assurer que le titre est sur une seule ligne */
 .banner h1 {
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
   font-weight: 700;
+  white-space: nowrap; /* Empêche le titre de se casser sur plusieurs lignes */
 }
 
+/* Paragraphe commence à gauche */
 .banner p {
   font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
+  text-align: left; /* Aligne le texte à gauche */
 }
+
 
 /* Section title */
 .section-title {
