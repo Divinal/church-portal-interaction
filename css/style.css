@@ -312,3 +312,33 @@ ul {
 .dropdown-submenu:hover .dropdown-menu {
   display: block;
 }
+
+/* Positionner le conteneur de l'image */
+.banner-image-container {
+  position: relative;
+}
+
+/* Texte avec une ombre (simulant une bordure) */
+.banner-text {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-30%, -30%);
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7); 
+}
+
+/* Optionnel : Ajouter un peu d'ombre au texte pour le rendre plus visible sur toutes les images */
+.banner-text h1, .banner-text p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Ajuster la taille de l'image en fonction de la largeur de la fenêtre */
+.banner-image-container img {
+  width: 100vw; /* L'image occupe 100% de la largeur de la fenêtre */
+  height: 80vh; /* L'image occupe 60% de la hauteur de la fenêtre */
+  object-fit: cover; /* L'image couvre toute la zone sans se déformer */
+}
