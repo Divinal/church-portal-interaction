@@ -84,6 +84,7 @@ ul {
 .btn-outline-primary:hover, .btn-outline-primary:focus {
   background-color: var(--church-blue);
   border-color: var(--church-blue);
+  
 }
 
 /* Navbar styles */
