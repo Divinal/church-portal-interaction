@@ -65,6 +65,14 @@ ul {
   gap: 10px; 
 }
 
+.text-white {
+  color: #ADD8E6 !important; /* Bleu clair */
+}
+
+.text-white:hover {
+  color: #87CEFA !important; /* Bleu ciel un peu plus foncé au survol */
+}
+
 
 .btn-primary {
   background-color: var(--church-blue);
