@@ -23,8 +23,8 @@
   </head>
   <body>
 
-        <!-- Barre de navigation supérieure avec réseaux sociaux et recherche -->
-        <div class="top-nav bg-light py-2 fixed-top">
+         <!-- Barre de navigation supérieure avec réseaux sociaux et recherche -->
+         <div class="top-nav bg-light py-2 fixed-top">
           <div class="container d-flex justify-content-between align-items-center">
             <div class="social-icons">
               <a href="https://web.facebook.com/eeccongo" class="text-dark me-3" target="_blank"><i class="fab fa-facebook"></i></a>
@@ -80,20 +80,19 @@
                   <li class="dropdown-submenu">
                       <a class="dropdown-item dropdown-toggle" href="#">Aumônerie-Générale</a>
                       <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="aumonerie-arme.html">Armé</a></li>
-                          <li><a class="dropdown-item" href="aumonerie-prison.html">Prison</a></li>
-                          <li><a class="dropdown-item" href="aumonerie-education.html">Université/Scoalire</a></li>
-                          <li><a class="dropdown-item" href="aumonerie-hopital.html">Centres de Santé/Hopitaux</a></li>
-                          <li><a class="dropdown-item" href="aumonerie-pmr.html">Personnes avec Handicape</a></li>
-                          
+                        <li><a class="dropdown-item" href="aumonerie-arme.html">Armé</a></li>
+                        <li><a class="dropdown-item" href="aumonerie-prison.html">Prison</a></li>
+                        <li><a class="dropdown-item" href="aumonerie-education.html">Université/Scoalire</a></li>
+                        <li><a class="dropdown-item" href="aumonerie-hopital.html">Centres de Santé/Hopitaux</a></li>
+                        <li><a class="dropdown-item" href="aumonerie-pmr.html">Personnes avec Handicape</a></li> 
                       </ul>
                   </li>
                   <li class="dropdown-submenu">
                     <a class="dropdown-item dropdown-toggle" href="#">Communication</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Medias</a></li>
-                        <li><a class="dropdown-item" href="#">Les Communiqués</a></li>
-                        <li><a class="dropdown-item" href="#">Activités Synodales</a></li>
+                        <li><a class="dropdown-item" href="aumonerie-jeunesse.html">Medias</a></li>
+                        <li><a class="dropdown-item" href="aumonerie-communication.html">Les Communiqués</a></li>
+                        <li><a class="dropdown-item" href="aumonerie-musique.html">Activités Synodales</a></li>
                     </ul>
                 </li>
               </ul>
@@ -111,9 +110,9 @@
                 <li class="dropdown-submenu">
                   <a class="dropdown-item dropdown-toggle" href="#">Partenariat Historique</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">CEC-RDC</a></li>
-                    <li><a class="dropdown-item" href="#">Eglise Unit de Suède</a></li>
-                    <li><a class="dropdown-item" href="#">Eglise Evangélique de Norvege</a></li>
+                    <li><a class="dropdown-item" href="aumonerie-communication.html">CEC-RDC</a></li>
+                    <li><a class="dropdown-item" href="aumonerie-jeunesse.html">Eglise Unit de Suède</a></li>
+                    <li><a class="dropdown-item" href="aumonerie-musique.html">Eglise Evangélique de Norvege</a></li>
 
                   </ul>
               </li>
@@ -144,17 +143,48 @@
     <main> 
       <!-- Hero Banner -->
 
-      <section class="banner" style="background-image: url('images/banners/home-banner.jpg');">
-        <div class="banner-content">
-            <h1 class="display-3 text-center mb-4 fade-in">Église Évangélique du Congo</h1>
-            <p class="lead text-center mb-5 slide-in">Repose sur les principes fondamentaux du protestantisme :
-                La suprématie des Écritures (la Bible comme seule autorité de foi et de pratique)
-                Le salut par la foi en Jésus-Christ . . .</p>
-            <div class="text-center">
-                <a href="../contact.html" class="btn btn-primary btn-lg">Nous contacter</a>
+      <section id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Première image avec texte -->
+          <div class="carousel-item active">
+            <div class="banner-image-container">
+              <img src="images/banners/home-banner.jpg" class="d-block w-100" alt="Image 1">
+              <div class="banner-text">
+                <h1 class="display-3 text-center">Église Évangélique du Congo</h1>
+                <p class="lead text-center">Repose sur les principes fondamentaux du protestantisme : La suprématie des Écritures, Le salut par la foi en Jésus-Christ...</p>
+              </div>
             </div>
+          </div>
+          <!-- Deuxième image avec texte -->
+          <div class="carousel-item">
+            <div class="banner-image-container">
+              <img src="../images/images/image2.jpg" class="d-block w-100" alt="Image 2">
+              <div class="banner-text">
+                <h1 class="display-3 text-center">Église Évangélique du Congo</h1>
+                <p class="lead text-center">Repose sur les principes fondamentaux du protestantisme...</p>
+              </div>
+            </div>
+          </div>
+          <!-- Troisième image avec texte -->
+          <div class="carousel-item">
+            <div class="banner-image-container">
+              <img src="../images/images/image3.jpg" class="d-block w-100" alt="Image 3">
+              <div class="banner-text">
+                <h1 class="display-3 text-center">Église Évangélique du Congo</h1>
+                <p class="lead text-center">Repose sur les principes fondamentaux du protestantisme...</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section> 
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>      
+      </section> 
         <h1>Bienvenue sur la page</h1>
         <p>Contenu de la page...</p>
       </main>
@@ -164,7 +194,7 @@
           <div class="row g-4">
             <div class="col-lg-4">
               <h3 class="h5 mb-4 text-gold">Église Évangélique du Congo</h3>
-              <p class="mb-4">Fondée en <strong>1909</strong> par la <em>Société des Missions Évangéliques de Paris (SMEP), l’Église Évangélique du Congo (EEC)</em> est l’une des principales dénominations protestantes du pays. Elle fonctionne selon un système <strong>presbytérien réformé,</strong> dirigé par un <strong>Synode National</strong> et un <strong>Président National.</strong>
+              <p class="mb-4">Fondée en <strong>1909</strong> par <em>les missionnaires Suédois, l’Église Évangélique du Congo (EEC)</em> est l’une des principales dénominations protestantes du pays. Elle fonctionne selon un système <strong>presbytérien réformé,</strong> dirigé par un <strong>Synode National</strong> et un <strong>Président National.</strong>
                 L’EEC repose sur les principes fondamentaux du protestantisme : <strong>suprématie de la Bible, salut par la foi en Jésus-Christ, et importance de la prédication.</strong> En plus de sa mission spirituelle, elle est active dans <strong>l’éducation, la santé et le développement social.</strong> Elle collabore avec plusieurs organisations chrétiennes internationales et continue d’avoir un impact significatif au Congo.</p>
               <div class="d-flex gap-3 mt-4">
                 <a href="https://web.facebook.com/eeccongo" class="text-white hover-gold" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -174,16 +204,48 @@
               </div>
             </div>
             <div class="col-lg-4">
-              <h3 class="h5 mb-4 text-gold">Liens Rapides</h3>
-              <ul class="list-unstyled">
-                <li class="mb-2"><a href="../index.html" class="text-white hover-gold text-decoration-none">Accueil</a></li> 
-                <li class="mb-2"><a href="../institution/synode.html" class="text-white hover-gold text-decoration-none">Synode</a></li>
-                <li class="mb-2"><a href="jeunesse.html" class="text-white hover-gold text-decoration-none">Jeunesse</a></li>
-                <li class="mb-2"><a href="../blog.html" class="text-white hover-gold text-decoration-none">Blog</a></li>
-                <li class="mb-2"><a href="../contact.html" class="text-white hover-gold text-decoration-none">Contact</a></li>
-                <li class="mb-2"><a href="../politique-confidentialite.html" class="text-white hover-gold text-decoration-none">Politique de Confidentialité</a></li>
-                <li class="mb-2"><a href="../faq.html" class="text-white hover-gold text-decoration-none">FAQ</a></li>
-              </ul>
+              <h3 class="h5 mb-4 text-gold">Repertoire et Liens Rapides</h3>
+              <div class="row">
+                <!-- Première colonne -->
+                <div class="col-md-6">
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <a href="institution.html" class="text-white hover-gold text-decoration-none">Institution</a>
+                      <ul class="list-unstyled ps-3">
+                        <li><a href="../institution/synode.html" class="text-white hover-gold text-decoration-none">Synode</a></li>
+                        <li><a href="../institution/conseil-synodal.html" class="text-white hover-gold text-decoration-none">Conseil Synodal</a></li>
+                      </ul>
+                    </li>
+              
+                    <li class="mb-2">
+                      <a href="departements.html" class="text-white hover-gold text-decoration-none">Départements</a>
+                      <ul class="list-unstyled ps-3">
+                        <li><a href="jeunesse.html" class="text-white hover-gold text-decoration-none">Jeunesse</a></li>
+                        <li><a href="evangelisation.html" class="text-white hover-gold text-decoration-none">Évangélisation</a></li>
+                      </ul>
+                    </li>
+              
+                    <li class="mb-2">
+                      <a href="#" class="text-white hover-gold text-decoration-none">Relations</a>
+                      <ul class="list-unstyled ps-3">
+                        <li><a href="../partenaires/oecumenisme.html" class="text-white hover-gold text-decoration-none">Œcuménisme</a></li>
+                        <li><a href="#" class="text-white hover-gold text-decoration-none">Partenariats</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              
+                <!-- Deuxième colonne -->
+                <div class="col-md-6">
+                  <ul class="list-unstyled">
+                    <li class="mb-2"><a href="../faq.html" class="text-white hover-gold text-decoration-none">FAQ</a></li>
+                    <li class="mb-2"><a href="../blog.html" class="text-white hover-gold text-decoration-none">Blog</a></li>
+                    <li class="mb-2"><a href="../contact.html" class="text-white hover-gold text-decoration-none">Contact</a></li>
+                    <li class="mb-2"><a href="../politique-confidentialite.html" class="text-white hover-gold text-decoration-none">Politique de Confidentialité</a></li>
+                  </ul>
+                </div>
+              </div>
+              
             </div>
             <div class="col-lg-4">
               <h3 class="h5 mb-4 text-gold">Contact</h3>
@@ -200,7 +262,7 @@
                   <i class="fas fa-envelope text-gold me-3 mt-1"></i>
                   <span>contact@egliseevangeliquecongo.org</span>
                 </li>
-              </ul> 
+              </ul>
             </div>
           </div>
           <div class="border-top border-secondary mt-5 pt-4 text-center">
