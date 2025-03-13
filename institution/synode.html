@@ -38,7 +38,6 @@
                 <span>+242 12 345 6789</span>
               </div>
             </div>
-             
           </div>           
         </div>
     <!-- Navigation -->
@@ -69,33 +68,33 @@
                   Départements
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="../departements/dgep.html">DGEP</a></li>
-                <li><a class="dropdown-item" href="../departements/cteapd.html">CTEPAD</a></li>
-                <li><a class="dropdown-item" href="../departements/sante.html">Santé</a></li>
-                <li><a class="dropdown-item" href="../departements/jeunesse.html">Jeunesse</a></li>
-                <li><a class="dropdown-item" href="../departements/musique.html">Musique</a></li>
-                <li><a class="dropdown-item" href="../departements/evangelisation.html">Évangélisation</a></li>
-                <li><a class="dropdown-item" href="../departements/femmes-famille.html">Femmes et Famille</a></li>
-                <li><a class="dropdown-item" href="../departements/action-paix.html">Action Évangélique pour la Paix</a></li>
-                <!-- Sous-menu Aumônerie -->
-                <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Aumônerie-Générale</a>
+                  <li><a class="dropdown-item" href="../departements/dgep.html">DGEP</a></li>
+                  <li><a class="dropdown-item" href="../departements/cteapd.html">CTEPAD</a></li>
+                  <li><a class="dropdown-item" href="../departements/sante.html">Santé</a></li>
+                  <li><a class="dropdown-item" href="../departements/jeunesse.html">Jeunesse</a></li>
+                  <li><a class="dropdown-item" href="../departements/musique.html">Musique</a></li>
+                  <li><a class="dropdown-item" href="../departements/evangelisation.html">Évangélisation</a></li>
+                  <li><a class="dropdown-item" href="../departements/femmes-famille.html">Femmes et Famille</a></li>
+                  <li><a class="dropdown-item" href="../departements/action-paix.html">Action Évangélique pour la Paix</a></li>
+                  <!-- Sous-menu Aumônerie -->
+                  <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Aumônerie-Générale</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../departements/aumonerie-arme.html">Armé</a></li>
+                        <li><a class="dropdown-item" href="../departements/aumonerie-prison.html">Prison</a></li>
+                        <li><a class="dropdown-item" href="../departements/aumonerie-education.html">Université/Scoalire</a></li>
+                        <li><a class="dropdown-item" href="../departements/aumonerie-hopital.html">Centres de Santé/Hopitaux</a></li>
+                        <li><a class="dropdown-item" href="../departements/aumonerie-pmr.html">Personnes avec Handicape</a></li> 
+                      </ul>
+                  </li>
+                  <li class="dropdown-submenu">
+                    <a class="dropdown-item dropdown-toggle" href="#">Communication</a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="../departements/aumonerie-arme.html">Armé</a></li>
-                      <li><a class="dropdown-item" href="../departements/aumonerie-prison.html">Prison</a></li>
-                      <li><a class="dropdown-item" href="../departements/aumonerie-education.html">Université/Scoalire</a></li>
-                      <li><a class="dropdown-item" href="../departements/aumonerie-hopital.html">Centres de Santé/Hopitaux</a></li>
-                      <li><a class="dropdown-item" href="../departements/aumonerie-pmr.html">Personnes avec Handicape</a></li> 
+                        <li><a class="dropdown-item" href="../departements/aumonerie-jeunesse.html">Medias</a></li>
+                        <li><a class="dropdown-item" href="../departements/aumonerie-communication.html">Les Communiqués</a></li>
+                        <li><a class="dropdown-item" href="../departements/aumonerie-musique.html">Activités Synodales</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-submenu">
-                  <a class="dropdown-item dropdown-toggle" href="#">Communication</a>
-                  <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Medias</a></li>
-                      <li><a class="dropdown-item" href="#">Les Communiqués</a></li>
-                      <li><a class="dropdown-item" href="#">Activités Synodales</a></li>
-                  </ul>
-                  </li>
               </ul>
           </li>
 
@@ -135,16 +134,64 @@
       </div>
     </nav>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Page Banner -->
-      <section class="banner" style="background-image: url('../images/banners/synode-banner.jpg');">
-        <div class="banner-content">
-          <h1 class="display-3 text-center mb-4 fade-in">Le Synode</h1>
-          <p class="lead text-center mb-5 fade-in">L'assemblée générale de l'Église Évangélique du Congo</p>
-        </div>
-      </section>
+    <div id="searchResults" class="container mt-4" style="display: none;">
+      <h2>Résultats de recherche</h2>
+      <ul id="resultsList" class="list-group"></ul>
+    </div>
 
+    <!-- Main Content -->
+    <main> 
+      <!-- Hero Banner -->
+      <section id="bannerCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Première image avec texte -->
+          <div class="carousel-item active">
+            <div class="banner-image-container">
+              <img src="../images/banners/synode1.jpg" class="d-block w-100" alt="Image 1">
+              <div class="banner-text">
+                <h1 class="display-3 text-center">Le Synode de l'Église Évangélique du Congo</h1>
+                <p class="lead text-center">Le Synode est l'assemblée générale de l'Église Évangélique du Congo. 
+                  C'est l'organe suprême de décision qui définit les orientations et les politiques de l'église</p>              </div>
+            </div>
+          </div>
+          <!-- Deuxième image avec texte -->
+          <div class="carousel-item">
+            <div class="banner-image-container">
+              <img src="../images/banners/synode2.jpg" class="d-block w-100" alt="Image 2">
+              <div class="banner-text">
+                <h1 class="display-3 text-center">l'Assemblée Générale Synodale</h1>
+                <p class="lead text-center">Le Synode se réunit tous les trois ans en session ordinaire. 
+                  Toutefois, des sessions extraordinaires peuvent être convoquées selon les besoins</p>
+              </div>
+            </div>
+          </div>
+          <!-- Troisième image avec texte -->
+          <div class="carousel-item">
+            <div class="banner-image-container">
+              <img src="../images/banners/synode4.jpg" class="d-block w-100" alt="Image 3">
+              <div class="banner-text">
+                <h1 class="display-3 text-center">Le Synode</h1>
+                <p class="lead text-center">définit les orientations générales de l'Église
+                  Adopter et réviser la constitution et les règlements de l'Église
+                  Élire les membres du Conseil Synodal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <div class="text-center">
+          <a href="../contact.html" class="btn btn-primary btn-lg">Faire un don</a>
+          <a href="contact.html" class="btn btn-primary btn-lg">Nous contacter</a>
+        </div>        
+      </section>   
+      
       <!-- Content Section -->
       <section class="py-5">
         <div class="container py-5">
@@ -314,7 +361,7 @@
             <ul class="list-unstyled">
               <li class="mb-2"><a href="../index.html" class="text-white hover-gold text-decoration-none">Accueil</a></li>
               <li class="mb-2"><a href="../synode.html" class="text-white hover-gold text-decoration-none">Synode</a></li>
-              <li class="mb-2"><a href="../departements/jeunesse.html" class="text-white hover-gold text-decoration-none">Jeunesse</a></li>
+              <li class="mb-2"><a href="../../departements/jeunesse.html" class="text-white hover-gold text-decoration-none">Jeunesse</a></li>
               <li class="mb-2"><a href="../blog.html" class="text-white hover-gold text-decoration-none">Blog</a></li>
               <li class="mb-2"><a href="../contact.html" class="text-white hover-gold text-decoration-none">Contact</a></li>
               <li class="mb-2"><a href="../politique-confidentialite.html" class="text-white hover-gold text-decoration-none">Politique de Confidentialité</a></li>
