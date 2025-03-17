@@ -306,10 +306,9 @@
                       <h3 class="card-title mb-4">Envoyez-nous un message</h3>
                       <!-- <form id="contactForm" onsubmit="return validateForm('contactForm')"> -->
                         <form action="https://formspree.io/f/mgvavzlg" method="POST">
-                          <input type="hidden" name="_replyto" value="divinmister@gmail.com">
-                          <input type="hidden" name="_subject" value="Nouveau message depuis le site">
                           <input type="hidden" name="_next" value="https://divinal.github.io/church-portal-interaction/confirmation.html">
-                        
+                          <input type="hidden" name="_replyto" value="divinmister@gmail.com">
+                          <input type="hidden" name="_subject" value="Nouveau message depuis le site">                        
                           <div class="row g-3">
                             <div class="col-md-6">
                               <div class="form-floating mb-3">
@@ -320,13 +319,30 @@
                             </div>
                             <div class="col-md-6">
                               <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="first-name" name="Prenom" placeholder="Votre Prenom" required>
+                                <label for="first-name">Prénom</label>
+                                <div class="invalid-feedback">Veuillez entrer votre prénom</div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="row g-3">
+                            <div class="col-md-6">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="parish" name="Paroisse" placeholder="Votre Paroisse" required>
+                                <label for="parish">Paroisse</label>
+                                <div class="invalid-feedback">Veuillez entrer votre paroisse</div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="email" name="Email" placeholder="Votre email" required>
                                 <label for="email">Email</label>
                                 <div class="invalid-feedback">Veuillez entrer un email valide</div>
                               </div>
                             </div>
                           </div>
-                        
+
                           <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="subject" name="Sujet" placeholder="Sujet" required>
                             <label for="subject">Sujet</label>
