@@ -305,48 +305,53 @@
                     <div class="card-body p-4 p-md-5">
                       <h3 class="card-title mb-4">Envoyez-nous un message</h3>
                       <!-- <form id="contactForm" onsubmit="return validateForm('contactForm')"> -->
-                        <form id="contactForm" action="https://formspree.io/f/mgvavzyg" method="POST">
-                        <div class="row g-3">
-                          <div class="col-md-6">
-                            <div class="form-floating mb-3">
-                              <input type="text" class="form-control" id="name" placeholder="Votre nom" required>
-                              <label for="name">Nom</label>
-                              <div class="invalid-feedback">Veuillez entrer votre nom</div>
+                        <form action="https://formspree.io/f/mgvavzlg" method="POST">
+                          <input type="hidden" name="_replyto" value="divinmister@gmail.com">
+                          <input type="hidden" name="_subject" value="Nouveau message depuis le site">
+                          <input type="hidden" name="_next" value="https://divinal.github.io/church-portal-interaction/confirmation.html">
+                        
+                          <div class="row g-3">
+                            <div class="col-md-6">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="name" name="Nom" placeholder="Votre nom" required>
+                                <label for="name">Nom</label>
+                                <div class="invalid-feedback">Veuillez entrer votre nom</div>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" name="Email" placeholder="Votre email" required>
+                                <label for="email">Email</label>
+                                <div class="invalid-feedback">Veuillez entrer un email valide</div>
+                              </div>
                             </div>
                           </div>
-                          <div class="col-md-6">
-                            <div class="form-floating mb-3">
-                              <input type="email" class="form-control" id="email" placeholder="Votre email" required>
-                              <label for="email">Email</label>
-                              <div class="invalid-feedback">Veuillez entrer un email valide</div>
-                            </div>
+                        
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="subject" name="Sujet" placeholder="Sujet" required>
+                            <label for="subject">Sujet</label>
+                            <div class="invalid-feedback">Veuillez entrer un sujet</div>
                           </div>
-                        </div>
                         
-                        <div class="form-floating mb-3">
-                          <input type="text" class="form-control" id="subject" placeholder="Sujet" required>
-                          <label for="subject">Sujet</label>
-                          <div class="invalid-feedback">Veuillez entrer un sujet</div>
-                        </div>
+                          <div class="form-floating mb-3">
+                            <textarea class="form-control" id="message" name="Message" placeholder="Votre message" style="height: 200px" required></textarea>
+                            <label for="message">Message</label>
+                            <div class="invalid-feedback">Veuillez entrer votre message</div>
+                          </div>
                         
-                        <div class="form-floating mb-3">
-                          <textarea class="form-control" id="message" placeholder="Votre message" style="height: 200px" required></textarea>
-                          <label for="message">Message</label>
-                          <div class="invalid-feedback">Veuillez entrer votre message</div>
-                        </div>
+                          <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="privacy" required>
+                            <label class="form-check-label" for="privacy">
+                              J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a>
+                            </label>
+                            <div class="invalid-feedback">Vous devez accepter la politique de confidentialité</div>
+                          </div>
                         
-                        <div class="form-check mb-4">
-                          <input class="form-check-input" type="checkbox" id="privacy" required>
-                          <label class="form-check-label" for="privacy">
-                            J'accepte la <a href="politique-confidentialite.html">politique de confidentialité</a>
-                          </label>
-                          <div class="invalid-feedback">Vous devez accepter la politique de confidentialité</div>
-                        </div>
+                          <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
+                          </div>
+                        </form>
                         
-                        <div class="d-grid">
-                          <button type="submit" class="btn btn-primary btn-lg">Envoyer</button>
-                        </div>
-                      </form>
                     
                     </div>
                   </div>
