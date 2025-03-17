@@ -129,6 +129,22 @@ ul {
   font-family: 'Merriweather', serif;
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.navbar-brand::before {
+  content: "";
+  background: url('../images/banners/logo.png') no-repeat center center;
+  background-size: contain;
+  width: 50px;  /* Ajuste la largeur du logo */
+  height: 50px; /* Ajuste la hauteur du logo */
+  display: inline-block;
+  margin-right: 10px; /* Ajoute un espace entre le logo et le texte */
+}
+
 /* Banner */
 .banner {
   position: relative;
