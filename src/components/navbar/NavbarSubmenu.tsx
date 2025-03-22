@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
@@ -26,6 +27,24 @@ const NavbarSubmenu = ({
   toggleSubmenu,
   closeMenu
 }: NavbarSubmenuProps) => {
+  const location = useLocation();
+  
+  // Fonction améliorée pour vérifier si un item ou ses sous-items sont actifs
+  const isItemActive = (item: MenuItem): boolean => {
+    // Vérifier si l'item actuel correspond au chemin
+    if (location.pathname === item.path) return true;
+    
+    // Vérifier les sous-menus
+    if (item.submenu) {
+      return item.submenu.some(subitem => 
+        location.pathname === subitem.path || 
+        location.pathname.startsWith(`${subitem.path}/`)
+      );
+    }
+    
+    return false;
+  };
+
   if (!item.submenu) {
     return (
       <Link
@@ -34,7 +53,7 @@ const NavbarSubmenu = ({
           mobile
             ? "block px-3 py-2 text-gray-700 hover:text-church-DEFAULT"
             : "nav-link",
-          isActive(item.path) && (mobile ? "text-church-DEFAULT font-medium" : "nav-link-active")
+          (location.pathname === item.path) && (mobile ? "text-church-DEFAULT font-medium" : "nav-link-active")
         )}
         onClick={closeMenu}
       >
@@ -50,7 +69,7 @@ const NavbarSubmenu = ({
           onClick={() => toggleSubmenu(item.label)}
           className={cn(
             "w-full flex justify-between items-center px-3 py-2 text-gray-700 hover:text-church-DEFAULT",
-            isActive(item.path) && "text-church-DEFAULT font-medium"
+            isItemActive(item) && "text-church-DEFAULT font-medium"
           )}
         >
           {item.label}
@@ -70,7 +89,7 @@ const NavbarSubmenu = ({
                 to={subitem.path}
                 className={cn(
                   "block px-3 py-2 text-sm text-gray-600 hover:text-church-DEFAULT",
-                  isActive(subitem.path) && "text-church-DEFAULT font-medium"
+                  location.pathname === subitem.path && "text-church-DEFAULT font-medium"
                 )}
                 onClick={closeMenu}
               >
@@ -90,7 +109,7 @@ const NavbarSubmenu = ({
         onClick={() => toggleSubmenu(item.label)}
         className={cn(
           "flex items-center nav-link",
-          isActive(item.path) && "nav-link-active"
+          isItemActive(item) && "nav-link-active"
         )}
       >
         {item.label}
@@ -103,7 +122,7 @@ const NavbarSubmenu = ({
             to={subitem.path}
             className={cn(
               "block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors",
-              isActive(subitem.path) && "bg-blue-50 text-blue-700"
+              location.pathname === subitem.path && "bg-blue-50 text-blue-700"
             )}
           >
             {subitem.label}
@@ -115,4 +134,3 @@ const NavbarSubmenu = ({
 };
 
 export default NavbarSubmenu;
-

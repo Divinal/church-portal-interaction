@@ -62,7 +62,14 @@ const Navbar = () => {
     setOpenSubmenu(openSubmenu === label ? null : label);
   };
 
+  // Fonction améliorée pour vérifier si un chemin est actif
   const isActive = (path: string) => {
+    // La page d'accueil ne doit être active que pour le chemin exact "/"
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    
+    // Pour les autres pages, vérifier si le pathname commence par le chemin
     return location.pathname === path || location.pathname.startsWith(`${path}/`);
   };
 
@@ -76,6 +83,12 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  // Reset le menu ouvert quand on change de page
+  useEffect(() => {
+    setOpenSubmenu(null);
+    setIsOpen(false);
+  }, [location.pathname]);
 
   return (
     <nav className={cn(
