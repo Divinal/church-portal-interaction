@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Menu, X, Search } from "lucide-react";
@@ -62,15 +61,21 @@ const Navbar = () => {
     setOpenSubmenu(openSubmenu === label ? null : label);
   };
 
-  // Fonction améliorée pour vérifier si un chemin est actif
+  // Improved function to check if a path is active
   const isActive = (path: string) => {
-    // La page d'accueil ne doit être active que pour le chemin exact "/"
+    // For home page, only exact match
     if (path === '/') {
       return location.pathname === '/';
     }
     
-    // Pour les autres pages, vérifier si le pathname commence par le chemin
-    return location.pathname === path || location.pathname.startsWith(`${path}/`);
+    // For parent menu items with submenu
+    if (path.split('/').length === 2 && path !== '/') {
+      // For section pages like /institution, /departements, etc.
+      return location.pathname.startsWith(path + '/');
+    }
+    
+    // For specific pages, exact match
+    return location.pathname === path;
   };
 
   useEffect(() => {
@@ -84,7 +89,7 @@ const Navbar = () => {
     };
   }, []);
 
-  // Reset le menu ouvert quand on change de page
+  // Reset opened menu when page changes
   useEffect(() => {
     setOpenSubmenu(null);
     setIsOpen(false);

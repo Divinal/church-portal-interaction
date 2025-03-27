@@ -29,17 +29,14 @@ const NavbarSubmenu = ({
 }: NavbarSubmenuProps) => {
   const location = useLocation();
   
-  // Fonction améliorée pour vérifier si un item ou ses sous-items sont actifs
+  // Function to check if an item or its children are active
   const isItemActive = (item: MenuItem): boolean => {
-    // Vérifier si l'item actuel correspond au chemin
-    if (location.pathname === item.path) return true;
+    // Check if current item matches the path
+    if (isActive(item.path)) return true;
     
-    // Vérifier les sous-menus
+    // Check submenu items
     if (item.submenu) {
-      return item.submenu.some(subitem => 
-        location.pathname === subitem.path || 
-        location.pathname.startsWith(`${subitem.path}/`)
-      );
+      return item.submenu.some(subitem => isActive(subitem.path));
     }
     
     return false;
@@ -53,7 +50,7 @@ const NavbarSubmenu = ({
           mobile
             ? "block px-3 py-2 text-gray-700 hover:text-church-DEFAULT"
             : "nav-link",
-          (location.pathname === item.path) && (mobile ? "text-church-DEFAULT font-medium" : "nav-link-active")
+          isActive(item.path) && (mobile ? "text-church-DEFAULT font-medium" : "nav-link-active")
         )}
         onClick={closeMenu}
       >
@@ -89,7 +86,7 @@ const NavbarSubmenu = ({
                 to={subitem.path}
                 className={cn(
                   "block px-3 py-2 text-sm text-gray-600 hover:text-church-DEFAULT",
-                  location.pathname === subitem.path && "text-church-DEFAULT font-medium"
+                  isActive(subitem.path) && "text-church-DEFAULT font-medium"
                 )}
                 onClick={closeMenu}
               >
@@ -122,7 +119,7 @@ const NavbarSubmenu = ({
             to={subitem.path}
             className={cn(
               "block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-700 transition-colors",
-              location.pathname === subitem.path && "bg-blue-50 text-blue-700"
+              isActive(subitem.path) && "bg-blue-50 text-blue-700"
             )}
           >
             {subitem.label}
